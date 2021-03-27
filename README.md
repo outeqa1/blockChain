@@ -12,9 +12,9 @@ pip install -r requirements.txt
 ## Run app
 ```
 python main.py
-```
-Go to http://127.0.0.1:5000/
 
+Go to http://127.0.0.1:5000/
+```
 ## How it works
 ```
 Fill in the form as you wish 
