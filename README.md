@@ -1,6 +1,6 @@
 # Blockchain
 This project shows how blockchain works by the example of a lender-borrower relationship.
-Realized on flask framework
+Realized on flask framework.
 
 ## Installation
 ```
