@@ -1,6 +1,6 @@
+import hashlib
 import json
 import os
-import hashlib
 
 blockchain_dir = os.curdir + '/blockchain/'
 
@@ -17,6 +17,7 @@ def get_files():
 
 def check_integrity():
     files = get_files()
+    results = []
     for file in files[1:]:
         o = open(blockchain_dir + str(file))
         h = json.load(o)['hash']
@@ -28,7 +29,8 @@ def check_integrity():
         else:
             res = "CORRUPTED"
 
-        print('Block {} is: {}'.format(prev_file, res))
+        results.append({'block': prev_file, 'result': res})
+    return results
 
 
 def write_block(name, amount, to_whom, prev_hash=''):
@@ -48,7 +50,7 @@ def write_block(name, amount, to_whom, prev_hash=''):
 
 
 def main():
-    write_block('Astro', 1000, 'Galaxy')
+    write_block('resto', 514, 'pista')
 
 
 if __name__ == '__main__':
